@@ -5,5 +5,17 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-  }
-  
+    z-index: 1; /* Asegura que el icono esté por encima del campo de entrada */
+    padding: 5px; /* Espacio adicional alrededor del icono para facilitar el clic */
+    background-color: transparent; /* Fondo transparente para que sea independiente del estilo del campo de entrada */
+}
+
+/* Estilo para el icono cuando el campo de entrada tiene el tipo "password" */
+.password-eye-icon.fa-eye-slash {
+    color: #ccc; /* Color gris cuando está oculto */
+}
+
+/* Estilo para el icono cuando el campo de entrada tiene el tipo "text" */
+.password-eye-icon.fa-eye {
+    color: #007bff; /* Color azul cuando está visible */
+}

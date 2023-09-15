@@ -7,7 +7,10 @@ La clase `PasswordEye` proporciona una funcionalidad para alternar la visibilida
 Si deseas que el campo de entrada cambie automáticamente a tipo "password" cuando pierda el foco (blur), asegúrate de configurar el atributo `data-as-trigger` en "password-eye" en tu elemento de entrada HTML:
 
 ```html
-<input type="password" id="password-input" data-as-trigger="password-eye">
+<div class="form-floating">
+    <input type="password" id="password-input" placeholder="" class="form-control" data-as-trigger="password-eye">
+    <label>password</label>
+</div>
 ```
 
 ## Resultado
