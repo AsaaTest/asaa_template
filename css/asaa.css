@@ -1,0 +1,9 @@
+/* CSS para el icono del ojo */
+.password-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
