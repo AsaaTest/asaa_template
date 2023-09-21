@@ -43,10 +43,17 @@ class ContentSwapper {
         const target = trigger.getAttribute('data-as-target');
         const template = trigger.getAttribute('data-as-template');
         const targetElement = document.querySelector(target);
+        const customFunctionName = trigger.getAttribute('data-as-function');
 
         if (trigger.tagName === 'OPTION' ? trigger.selected : trigger.checked) {
             // Cargar el template en el target
             targetElement.innerHTML = document.querySelector(template).innerHTML;
+            new ContentSwapper(target);
+
+            // Ejecutar la función personalizada si se proporcionó y existe
+            if (customFunctionName && window[customFunctionName] && typeof window[customFunctionName] === 'function') {
+                window[customFunctionName](targetElement);
+            }
         } else {
             // Si no está marcado, eliminar el contenido solo si es la opción actual del select
             if (trigger.tagName === 'OPTION' && trigger.parentElement.value === trigger.value) {

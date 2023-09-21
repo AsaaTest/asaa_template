@@ -9,7 +9,7 @@ Primero, debes configurar tus elementos HTML de la siguiente manera:
 #### Opciones de Radio:
 
 ```html
-<input type="radio" name="nombre_grupo" id="opción_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1">
+<input type="radio" name="nombre_grupo" id="opción_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1" data-as-function="myFunction">
 <label for="opción_1">Etiqueta 1</label>
 ```
 
@@ -18,14 +18,15 @@ Primero, debes configurar tus elementos HTML de la siguiente manera:
 - `data-as-trigger="swap-template"`: Este atributo indica que este radio es un activador del intercambio de contenido.
 - `data-as-target`: Debes especificar el selector CSS del elemento donde deseas que se cargue el contenido.
 - `data-as-template`: Debes proporcionar el selector CSS de la plantilla que deseas cargar.
+- `data-as-function`: Proporciona una funcion personalizada que desees ejecutar al mostrar el template
 
 #### Select:
 
 ```html
 <select name="nombre_select" id="select_id">
     <option value="" selected>Seleccione</option>
-    <option value="valor_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1">Opción 1</option>
-    <option value="valor_2" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_2">Opción 2</option>
+    <option value="valor_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1" data-as-function="myFunction">Opción 1</option>
+    <option value="valor_2" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_2" data-as-function="myFunction">Opción 2</option>
 </select>
 ```
 
@@ -34,11 +35,12 @@ Primero, debes configurar tus elementos HTML de la siguiente manera:
 - `data-as-trigger="swap-template"`: Este atributo indica que estas opciones son activadores del intercambio de contenido.
 - `data-as-target`: Debes especificar el selector CSS del elemento donde deseas que se cargue el contenido.
 - `data-as-template`: Debes proporcionar el selector CSS de la plantilla que deseas cargar.
+- `data-as-function`: Proporciona una funcion personalizada que desees ejecutar al mostrar el template
 
 #### Checkboxes:
 
 ```html
-<input type="checkbox" name="nombre_checkbox" id="checkbox_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1">
+<input type="checkbox" name="nombre_checkbox" id="checkbox_1" data-as-trigger="swap-template" data-as-target="#contenedor_destino" data-as-template="#plantilla_1" data-as-function="myFunction">
 <label for="checkbox_1">Checkbox 1</label>
 ```
 
@@ -47,6 +49,7 @@ Primero, debes configurar tus elementos HTML de la siguiente manera:
 - `data-as-trigger="swap-template"`: Este atributo indica que este checkbox es un activador del intercambio de contenido.
 - `data-as-target`: Debes especificar el selector CSS del elemento donde deseas que se cargue el contenido.
 - `data-as-template`: Debes proporcionar el selector CSS de la plantilla que deseas cargar.
+- `data-as-function`: Proporciona una funcion personalizada que desees ejecutar al mostrar el template
 
 ### 2. Contenedor Destino y Plantillas
 
